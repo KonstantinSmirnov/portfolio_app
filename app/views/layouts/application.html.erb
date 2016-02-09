@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render 'shared/header' %>
+
+  <div id="fh5co-main">
+    <%= yield %>
+  </div>
+
+  <%= render 'shared/footer' %>
 
 </body>
 </html>

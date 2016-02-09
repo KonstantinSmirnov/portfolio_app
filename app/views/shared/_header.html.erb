@@ -1,0 +1,30 @@
+<header id="fh5co-header" role="banner">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="navbar-header">
+          <!-- Mobile Toggle Menu Button -->
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+          <%= link_to root_path, class: 'navbar-brand' do %>
+            <i class="fa fa-hashtag"></i>Smirnov
+          <% end %>
+          </div>
+          <div id="fh5co-navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'index' %>">
+                <%= link_to "Home", root_path %>
+              </li>
+              <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'projects' %>">
+                <%= link_to "Projects", projects_path %>
+              </li>
+              <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'contacts' %>">
+                <%= link_to "Contacts", contacts_path %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
