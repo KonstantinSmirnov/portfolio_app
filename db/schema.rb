@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20160211081450) do
 
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                        null: false
     t.string   "crypted_password"

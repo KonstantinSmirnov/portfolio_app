@@ -1,29 +1,23 @@
-<div class="text-center">
+<div class="fh5co-header text-center">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1 class="">Projects list</h1>
-        <h1>Hello world!</h1>
+        <h1 class="">Significant projects:</h1>
       </div>
     </div>
   </div>
 </div>
 
 <div id="fh5co-portfolio">
-  <div class="fh5co-portfolio-item ">
-    <div class="fh5co-portfolio-figure animate-box" style="background-image: url("1.jpg");"></div>
-    <div class="fh5co-portfolio-description">
-      <h2>Project First</h2>
-      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-      <p><a href="#" class="btn btn-primary">Go to the webpage</a></p>
+  <% @projects.each do |project| %>
+    <div class="fh5co-portfolio-item <%= cycle("", "fh5co-img-right" ) %>">
+      <div class="fh5co-portfolio-figure animate-box" style="background-image: url("1.jpg");"></div>
+      <div class="fh5co-portfolio-description">
+        <h2><%= project.title %></h2>
+        <p><%= project.description %></p>
+        <p><a href="<%= project.link %>" class="btn btn-primary">Go to the webpage</a></p>
+      </div>
     </div>
-  </div>
-  <div class="fh5co-portfolio-item fh5co-img-right">
-    <div class="fh5co-portfolio-figure animate-box" style="background-image: url(images/work_2.jpg);"></div>
-    <div class="fh5co-portfolio-description">
-      <h2>Project Second</h2>
-      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-      <p><a href="#" class="btn btn-primary">Read the casetudy</a></p>
-    </div>
-  </div>
+  <% end %>
+
 </div>

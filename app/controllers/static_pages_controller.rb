@@ -4,9 +4,10 @@ class StaticPagesController < ApplicationController
   end
 
   def projects
+    @projects = Project.all
   end
 
   def contacts
   end
-  
+
 end

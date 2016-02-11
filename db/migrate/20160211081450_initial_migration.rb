@@ -9,6 +9,14 @@ class InitialMigration < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :projects do |t|
+      t.string :title
+      t.string :description
+      t.string :link
+
+      t.timestamps
+    end
+
     add_index :users, :email, unique: true
   end
 end
