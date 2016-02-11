@@ -12,13 +12,13 @@
           </div>
           <div id="fh5co-navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'index' %>">
+              <li class=<%= active_link?(root_path) %>>
                 <%= link_to "Home", root_path %>
               </li>
-              <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'projects' %>">
+              <li class=<%= active_link?(projects_path) %>>
                 <%= link_to "Projects", projects_path %>
               </li>
-              <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'contacts' %>">
+              <li class=<%= active_link?(contacts_path) %>>
                 <%= link_to "Contacts", contacts_path %>
               </li>
               <% if !current_user %>
@@ -30,7 +30,7 @@
               <% end %>
               <% if current_user %>
                 <% if current_user.admin? %>
-                  <li class="<%= "active" if params[:controller] == 'admin/dashboard' %>">
+                  <li class=<%= active_link?(admin_dashboard_path) %>>
                     <%= link_to "Admin", admin_dashboard_path %>
                   </li>
                 <% end %>

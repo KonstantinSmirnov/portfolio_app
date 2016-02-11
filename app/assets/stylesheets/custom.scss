@@ -7645,45 +7645,45 @@ pre {
 .btn:hover, .btn:focus, .btn:active {
   background: #fff !important;
   color: #444 !important;
-  border: 2px solid #444 !important;
+  border: 1px solid #444 !important;
   box-shadow: none;
   outline: none;
 }
 
 .btn-outline {
-  border: 2px solid #ccc !important;
+  border: 1px solid #ccc !important;
   background: transparent;
   color: #2a2e37;
 }
 .btn-outline:hover, .btn-outline:active, .btn-outline:focus {
-  border: 2px solid #e32929 !important;
+  border: 1px solid #e32929 !important;
   background: #e32929 !important;
   color: #fff;
 }
 
 .btn-primary {
   background: #e32929;
-  border: 2px solid #e32929;
+  border: 1px solid #e32929;
 }
 
 .btn-success {
   background: #5cb85c;
-  border: 2px solid #5cb85c;
+  border: 1px solid #5cb85c;
 }
 
 .btn-danger {
   background: #d9534f;
-  border: 2px solid #d9534f;
+  border: 1px solid #d9534f;
 }
 
 .btn-info {
   background: #5bc0de;
-  border: 2px solid #5bc0de;
+  border: 1px solid #5bc0de;
 }
 
 .btn-warning {
   background: #f0ad4e;
-  border: 2px solid #f0ad4e;
+  border: 1px solid #f0ad4e;
 }
 
 .btn-primary,
@@ -7712,17 +7712,17 @@ pre {
 .btn-danger:focus {
   background: #fff;
   color: #444;
-  border: 2px solid #444;
+  border: 1px solid #444;
 }
 
 .form-control {
   box-shadow: none !important;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
 }
 .form-control:hover, .form-control:focus, .form-control:active {
   outline: none;
   box-shadow: none !important;
-  border: 2px solid #e32929;
+  border: 1px solid #e32929;
 }
 
 .fh5co-nav-toggle {
@@ -8105,7 +8105,7 @@ pre {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 .owl-theme .owl-dots .owl-dot span:hover {
   background: none;
@@ -8114,7 +8114,7 @@ pre {
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: white;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 
 .owl-carousel-fullwidth .item, .owl-carousel-fullwidth .fh5co-owl-text-wrap {

@@ -13,9 +13,10 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get 'login' => 'sessions#new'
   delete 'logout' => 'sessions#destroy'
-  
+
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
+    resources :projects
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
