@@ -14,11 +14,19 @@
   <%= render 'shared/header' %>
 
   <div id="fh5co-main">
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>">
-        <%= value %>
+    <div id="fh5co-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>">
+                <%= value %>
+                </div>
+              <% end %>
+          </div>
+        </div>
       </div>
-    <% end %>
+    </div>
 
     <%= yield %>
 
