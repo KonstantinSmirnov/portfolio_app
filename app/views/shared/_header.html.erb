@@ -7,7 +7,7 @@
           <!-- Mobile Toggle Menu Button -->
           <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
           <%= link_to root_path, class: 'navbar-brand' do %>
-            <i class="fa fa-hashtag"></i>Smirnov
+            <i class="fa fa-hashtag"></i>Personal_app
           <% end %>
           </div>
           <div id="fh5co-navbar" class="navbar-collapse collapse">
@@ -21,6 +21,18 @@
               <li class="<%= "active" if params[:controller] == 'static_pages' && params[:action] == 'contacts' %>">
                 <%= link_to "Contacts", contacts_path %>
               </li>
+              <% if current_user %>
+                <% if current_user.admin? %>
+                  <li class="<%= "active" if params[:controller] == 'admin/dashboard' %>">
+                    <%= link_to "Admin", admin_dashboard_path %>
+                  </li>
+                  <li>
+                    <%= link_to logout_path, method: :delete do %>
+                      <i class="fa fa-close"></i>
+                    <% end %>
+                  </li>
+                <% end %>
+              <% end %>
             </ul>
           </div>
         </div>

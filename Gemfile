@@ -52,6 +52,7 @@ gem 'bootstrap-sass'
 # font-awesome icons
 gem 'font-awesome-rails'
 
-
+# Users authentication
+gem 'sorcery'
 
 
