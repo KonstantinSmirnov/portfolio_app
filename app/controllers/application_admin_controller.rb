@@ -1,6 +1,6 @@
 class ApplicationAdminController < ApplicationSignedInController
   before_action :redirect_if_not_allowed
-    
+  layout 'admin'
     
   private
     
