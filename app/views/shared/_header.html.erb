@@ -33,12 +33,12 @@
                   <li class="<%= "active" if params[:controller] == 'admin/dashboard' %>">
                     <%= link_to "Admin", admin_dashboard_path %>
                   </li>
-                  <li>
-                    <%= link_to logout_path, method: :delete do %>
-                      <i class="fa fa-sign-out"></i>
-                    <% end %>
-                  </li>
                 <% end %>
+                <li>
+                  <%= link_to logout_path, method: :delete do %>
+                    <i class="fa fa-sign-out"></i>
+                  <% end %>
+                </li>
               <% end %>
             </ul>
           </div>
