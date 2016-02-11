@@ -5,25 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    <!-- Google Webfonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <%= render 'shared/header' %>
-  
+
   <div id="fh5co-main">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>">
         <%= value %>
       </div>
     <% end %>
-    
+
     <%= yield %>
 
-  
+
 
   <%= render 'shared/footer' %>
   </div>
-  
+
   <%= debug(params) if Rails.env.development? %>
 
 </body>
