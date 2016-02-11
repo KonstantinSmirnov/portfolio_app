@@ -9,39 +9,34 @@
 <body>
 
   <%= render 'shared/header' %>
-  
+
+  <div id="fh5co-main">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+
+<div id="fh5co-content">
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <div id="fh5co-main">
-          <% flash.each do |key, value| %>
-            <div class="alert alert-<%= key %>">
-              <%= value %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div id="fh5co-main">
-            <div class="col-sm-3">
-              <%= render 'shared/admin_dashboard_menu' %>
-            </div>
-            <div class="col-sm-9">
-              <%= yield %>
-            </div>
+        <div class="row">
+
+          <div class="col-sm-3">
+            <%= render 'shared/admin_dashboard_menu' %>
+          </div>
+          <div class="col-sm-9">
+            <%= yield %>
           </div>
         </div>
       </div>
     </div>
-    
   </div>
 
-  <%= render 'shared/footer' %>
-  
+    <%= render 'shared/footer' %>
+  </div>
+
   <%= debug(params) if Rails.env.development? %>
 
 </body>
