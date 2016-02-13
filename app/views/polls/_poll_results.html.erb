@@ -1,0 +1,12 @@
+<table class="table table-hover">
+<% @poll.questions.each do |question| %>
+  <tr>
+    <td><%= question.title %></td>
+    <td class="number"><%= "#{question.votes_in_percents(question)}%" %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to questions_poll_url(@poll), class: 'button poll-results', :remote => true do %>
+  <div class="button">Back</div>
+<% end %>

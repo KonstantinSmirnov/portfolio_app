@@ -17,6 +17,20 @@ class InitialMigration < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :polls do |t|
+      t.string :title
+
+      t.timestamps
+    end
+
+    create_table :questions do |t|
+      t.string :title
+      t.integer :poll_id
+      t.integer :votes, default: 0
+
+      t.timestamps
+    end
+
     add_index :users, :email, unique: true
   end
 end

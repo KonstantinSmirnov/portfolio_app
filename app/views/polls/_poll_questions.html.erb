@@ -1,0 +1,13 @@
+<%= form_for @poll, :url => vote_poll_url(@poll), :method => :put, :remote => true do |f| %>
+  <% @poll.questions.each_with_index do |question, i| %>
+    <%= radio_button_tag 'poll[question]', i, false, :fieldset => false, :label => false %> <%= question.title %></br>
+  <% end %>
+  <br>
+  <div class="text-center">
+    <%= f.submit 'Vote', :class => 'btn btn-primary' %><br/>
+  </div>
+
+  <%= link_to results_poll_url(@poll), class: 'button show-results', :remote => true do %>
+    <div class="">View Results</div>
+  <% end %>
+<% end %>

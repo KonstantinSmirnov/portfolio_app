@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def index
+    @poll = Poll.last
   end
 
   def projects

@@ -13,10 +13,24 @@
 
 ActiveRecord::Schema.define(version: 20160211081450) do
 
+  create_table "polls", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
     t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "poll_id"
+    t.integer  "votes",      default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

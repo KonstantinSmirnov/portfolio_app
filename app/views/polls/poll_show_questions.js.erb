@@ -1,0 +1,2 @@
+$("#poll_message").html("<%= escape_javascript(render :partial => 'poll_notice', :locals => { :flash => flash }) %>");
+$("#poll_body").html("<%= escape_javascript(render('poll_questions')) %>");

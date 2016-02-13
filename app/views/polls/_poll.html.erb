@@ -1,0 +1,13 @@
+<% unless @poll.blank? %>
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <h3><%= @poll.title %></h3>
+      <div id="poll_message"></div>
+      <div id="poll_body">
+        <%= render 'polls/poll_questions' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
