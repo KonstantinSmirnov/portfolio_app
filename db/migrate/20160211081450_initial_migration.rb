@@ -13,6 +13,7 @@ class InitialMigration < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.string :link
+      t.has_attached_file :image
 
       t.timestamps
     end
