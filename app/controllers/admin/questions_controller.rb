@@ -1,4 +1,4 @@
-class Admin::QuestionsController < AdminApplicationController
+class Admin::QuestionsController < ApplicationAdminController
 
 def new
     @question = Question.new
