@@ -6,7 +6,7 @@ class PollsController < ApplicationController
   def vote
     respond_to do |format|
       if params[:poll].blank? || params[:poll][:question].blank?
-        flash.now[:alert] = 'You need to click a choice to vote!'
+        flash.now[:success] = 'You need to click a choice to vote!'
         format.js { render 'poll_error' }
       else
         @poll = Poll.find(params[:id])

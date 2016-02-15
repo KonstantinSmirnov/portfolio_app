@@ -7,12 +7,15 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'projects' => 'static_pages#projects'
-  get 'contacts' => 'static_pages#contacts'
+  get 'contact' => 'static_pages#contact'
 
   # Sessions
   resources :sessions, only: [:new, :create, :destroy]
   get 'login' => 'sessions#new'
   delete 'logout' => 'sessions#destroy'
+
+  # Messaging (contact email)
+  post 'contact', to: 'messages#create'
 
   resources :polls, :only => [] do
     member do

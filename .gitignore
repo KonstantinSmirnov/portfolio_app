@@ -19,4 +19,4 @@
 .DS_Store
 database.yml
 secrets.yml
-config/environment_variables.yml
+local_env.yml

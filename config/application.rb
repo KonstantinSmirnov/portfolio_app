@@ -22,5 +22,28 @@ module PortfolioApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.0'
+
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_env.yml')
+      YAML.load(File.open(env_file)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
+
+    # set up mailer server
+    config.action_mailer.smtp_settings = {
+      :address              => ENV["SMTP_ADDRESS"],
+      :port                 => ENV["SMTP_PORT"],
+      :domain               => ENV["SMTP_DOMAIN"],
+      :user_name            => ENV['SMTP_USER_NAME'],
+      :password             => ENV["SMTP_PASSWORD"],
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
   end
 end
+
+
