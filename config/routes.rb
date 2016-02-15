@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   # Messaging (contact email)
   post 'contact', to: 'messages#create'
 
+
+
   resources :polls, :only => [] do
     member do
       put 'vote'
@@ -31,6 +33,9 @@ Rails.application.routes.draw do
     resources :polls do
       resources :questions
     end
+    # Change password
+    get 'change_password' => 'password#edit'
+    patch 'update_password' => 'password#update'
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
