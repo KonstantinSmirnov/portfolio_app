@@ -7504,7 +7504,7 @@ h1, h2, h3, h4, h5, h6 {
   #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description,
   #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure {
     display: block;
-    width: 100%;
+    width: 50%;
   }
 }
 #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure {
@@ -7515,7 +7515,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-figure {
-    height: 400px;
+    height: auto;
   }
 }
 #fh5co-portfolio .fh5co-portfolio-item .fh5co-portfolio-description {
@@ -7550,7 +7550,7 @@ h1, h2, h3, h4, h5, h6 {
   #fh5co-portfolio .fh5co-portfolio-item.fh5co-img-right .fh5co-portfolio-figure {
     position: relative;
     top: auto;
-    bototm: auto;
+    bottom: auto;
     height: 400px;
   }
 }
