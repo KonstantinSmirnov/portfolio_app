@@ -19,3 +19,4 @@
 .DS_Store
 database.yml
 secrets.yml
+local_env.yml

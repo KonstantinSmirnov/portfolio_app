@@ -8,7 +8,8 @@ class StaticPagesController < ApplicationController
     @projects = Project.all
   end
 
-  def contacts
+  def contact
+    @message = Message.new
   end
 
 end
