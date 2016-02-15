@@ -1,6 +1,6 @@
 module ApplicationHelper
   def active_link?(link)
-    return "active" if request.path.match "#{link}"
+    return "active" if request.path == link
   end
 
   def link_to_add_fields(name, f, association)
