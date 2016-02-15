@@ -1,6 +1,6 @@
 <div class="list-group">
-  <%= link_to "Dashboard", admin_dashboard_path, class: "list-group-item #{active_link?(admin_dashboard_path)}" %>
-  <%= link_to "Projects", admin_projects_path, class: "list-group-item #{active_link?(admin_projects_path)}" %>
-  <%= link_to "Polls", admin_polls_path, class: "list-group-item #{active_link?(admin_polls_path)}" %>
-  <%= link_to "Change Password", admin_change_password_path, class: "list-group-item #{active_link?(admin_change_password_path)}" %>
+  <%= link_to "Dashboard", admin_dashboard_path, class: (controller?("admin/dashboard") ? "active list-group-item" : "list-group-item") %>
+  <%= link_to "Projects", admin_projects_path, class: (controller?("admin/projects") ? "active list-group-item" : "list-group-item") %>
+  <%= link_to "Polls", admin_polls_path, class: (controller?("admin/polls") ? "active list-group-item" : "list-group-item") %>
+  <%= link_to "Change Password", admin_change_password_path, class: (controller?("admin/password") ? "active list-group-item" : "list-group-item") %>
 </div>

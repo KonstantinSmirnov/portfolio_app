@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
   def index
     @poll = Poll.last
+    @content = Content.first
   end
 
   def projects

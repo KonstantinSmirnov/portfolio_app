@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    get 'dashboard' => 'dashboard#index'
+    get 'dashboard' => 'dashboard#edit'
+    patch 'dashboard' => 'dashboard#update'
     resources :projects
     resources :polls do
       resources :questions

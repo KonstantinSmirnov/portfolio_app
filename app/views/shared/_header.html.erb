@@ -15,14 +15,14 @@
 
           <div id="fh5co-navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class=<%= active_link?(root_path) %>>
+              <li class=<%= "active" if controller?("static_pages") && action?("index") %>>
                 <%= link_to "Home", root_path %>
               </li>
-              <li class=<%= active_link?(projects_path) %>>
+              <li class=<%= "active" if controller?("static_pages") && action?("projects") %>>
                 <%= link_to "Projects", projects_path %>
               </li>
-              <li class=<%= active_link?(contact_path) %>>
-                <%= link_to "Contacts", contact_path %>
+              <li class=<%= "active" if controller?("static_pages") && action?("contact") %>>
+                <%= link_to "Contact", contact_path %>
               </li>
               <% if !current_user %>
                 <li>
@@ -33,7 +33,12 @@
               <% end %>
               <% if current_user %>
                 <% if current_user.admin? %>
-                  <li class=<%= active_link?(admin_dashboard_path) %>>
+                  <li class=<%= "active" if controller?(
+                                "admin/dashboard",
+                                "admin/projects",
+                                "admin/polls",
+                                "admin/password"
+                                ) %>>
                     <%= link_to "Admin", admin_dashboard_path %>
                   </li>
                 <% end %>

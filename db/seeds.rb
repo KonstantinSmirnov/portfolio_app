@@ -12,3 +12,9 @@ admin = User.create(
   password_confirmation: 'admin',
   role: 1 #admin
 )
+
+content = Content.create(
+  header: 'Make something you love',
+  subheader: 'This is a subheader',
+  text: 'There is a paragraph with text'
+)

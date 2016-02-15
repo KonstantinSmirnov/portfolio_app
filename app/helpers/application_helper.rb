@@ -1,6 +1,11 @@
 module ApplicationHelper
-  def active_link?(link)
-    return "active" if request.path == link
+
+  def controller?(*controller)
+    controller.include?(params[:controller])
+  end
+
+  def action?(*action)
+    action.include?(params[:action])
   end
 
   def link_to_add_fields(name, f, association)

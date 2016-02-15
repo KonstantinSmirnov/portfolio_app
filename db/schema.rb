@@ -16,6 +16,14 @@ ActiveRecord::Schema.define(version: 20160211081450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "contents", force: :cascade do |t|
+    t.string   "header"
+    t.string   "subheader"
+    t.string   "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "polls", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at"

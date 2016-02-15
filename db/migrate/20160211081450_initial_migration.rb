@@ -9,6 +9,14 @@ class InitialMigration < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :contents do |t|
+      t.string :header
+      t.string :subheader
+      t.string :text
+
+      t.timestamps
+    end
+
     create_table :projects do |t|
       t.string :title
       t.string :description
