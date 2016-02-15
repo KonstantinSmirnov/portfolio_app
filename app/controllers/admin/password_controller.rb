@@ -9,12 +9,12 @@ class Admin::PasswordController < ApplicationAdminController
     respond_to do |format|
       if @user.update_attributes(password_param)
         format.html {
-          flash[:success] = "Password was successfully changed."
+          flash[:success] = "Email and password were successfully changed."
           redirect_to admin_change_password_path
         }
       else
         format.html {
-          flash[:danger] = "Password was not updated."
+          flash[:danger] = "Email and password were not updated."
           render :edit
         }
       end
@@ -25,6 +25,6 @@ class Admin::PasswordController < ApplicationAdminController
   private
 
   def password_param
-    params.require(:user).permit(:password, :password_confirmation)
+    params.require(:user).permit(:password, :password_confirmation, :email)
   end
 end
