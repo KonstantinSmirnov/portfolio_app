@@ -19,4 +19,13 @@ module ApplicationHelper
     link_to(name, '#', class: "add_fields btn btn-default btn-sm", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
+  def full_title(page_title = '')
+    base_title = @content.logo_text
+    if page_title.empty?
+      base_title
+    else
+      base_title + " | " + page_title
+    end
+  end
+
 end
