@@ -22,7 +22,7 @@ class Admin::DashboardController < ApplicationAdminController
     private
 
     def content_params
-      params.require(:content).permit(:header, :subheader, :text)
+      params.require(:content).permit(:logo_icon, :logo_text, :header, :subheader, :text)
     end
 
 end

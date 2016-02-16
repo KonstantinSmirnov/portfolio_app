@@ -5,6 +5,14 @@
       <div class="panel-body">
       <%= form_for [:admin, @content], url: admin_dashboard_path do |f| %>
         <div class="form-group">
+          <%= f.label :logo_icon %>
+          <%= f.text_field :logo_icon, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :logo_text %>
+          <%= f.text_field :logo_text, class: 'form-control' %>
+        </div>
+        <div class="form-group">
           <%= f.label :header %>
           <%= f.text_field :header, class: 'form-control', required: true %>
         </div>

@@ -14,6 +14,8 @@ admin = User.create(
 )
 
 content = Content.create(
+  logo_icon: 'tree',
+  logo_text: 'Tree house',
   header: 'Make something you love',
   subheader: 'This is a subheader',
   text: 'There is a paragraph with text'

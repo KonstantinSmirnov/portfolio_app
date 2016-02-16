@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20160211081450) do
   enable_extension "plpgsql"
 
   create_table "contents", force: :cascade do |t|
+    t.string   "logo_text"
+    t.string   "logo_icon"
     t.string   "header"
     t.string   "subheader"
     t.string   "text"

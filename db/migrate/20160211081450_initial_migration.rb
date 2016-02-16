@@ -10,6 +10,8 @@ class InitialMigration < ActiveRecord::Migration
     end
 
     create_table :contents do |t|
+      t.string :logo_text
+      t.string :logo_icon
       t.string :header
       t.string :subheader
       t.string :text
