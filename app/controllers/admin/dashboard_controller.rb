@@ -27,6 +27,7 @@ class Admin::DashboardController < ApplicationAdminController
                                       :header,
                                       :subheader,
                                       :text,
+                                      :linkedin_link,
                                       :index_description,
                                       :index_keywords,
                                       :projects_description,

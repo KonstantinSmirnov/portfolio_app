@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
 
   def contact
     @message = Message.new
+    @content.linkedin_link
   end
 
 end

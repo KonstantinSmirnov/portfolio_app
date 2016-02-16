@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160211081450) do
     t.string   "header"
     t.string   "subheader"
     t.string   "text"
+    t.string   "linkedin_link"
     t.string   "index_description"
     t.string   "index_keywords"
     t.string   "projects_description"
