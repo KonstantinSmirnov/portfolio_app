@@ -18,5 +18,9 @@ content = Content.create(
   logo_text: 'Tree house',
   header: 'Make something you love',
   subheader: 'This is a subheader',
-  text: 'There is a paragraph with text'
+  text: 'There is a paragraph with text',
+  index_description: 'There is index page description',
+  index_keywords: 'There are index page keywords',
+  projects_description: 'There is projects page description',
+  projects_keywords: 'There are projects page keywords'
 )

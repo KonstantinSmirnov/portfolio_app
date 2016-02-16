@@ -24,6 +24,22 @@
           <%= f.label :text %>
           <%= f.text_area :text, class: 'form-control', required: true, rows: 5 %>
         </div>
+        <div class="form-group">
+          <%= f.label :index_description %>
+          <%= f.text_area :index_description, class: 'form-control', rows: 5 %>
+        </div>
+        <div class="form-group">
+          <%= f.label :index_keywords %>
+          <%= f.text_area :index_keywords, class: 'form-control', rows: 5 %>
+        </div>
+        <div class="form-group">
+          <%= f.label :projects_description %>
+          <%= f.text_area :projects_description, class: 'form-control', rows: 5 %>
+        </div>
+        <div class="form-group">
+          <%= f.label :projects_keywords %>
+          <%= f.text_area :projects_keywords, class: 'form-control', rows: 5 %>
+        </div>
         <div class="text-center">
           <%= f.submit class: 'btn btn-primary btn-lg' %>
         </div>

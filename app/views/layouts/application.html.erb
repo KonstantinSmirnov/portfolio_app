@@ -5,10 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- meta info -->
+  <meta name=description content="<%= yield(:description) %>"/>
+  <meta name=keywords content="<%= yield(:keywords) %>"/>
     <!-- Google Webfonts -->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 
   <%= render 'shared/header' %>
