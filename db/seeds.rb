@@ -19,6 +19,8 @@ content = Content.create(
   header: 'Make something you love',
   subheader: 'This is a subheader',
   text: 'There is a paragraph with text',
+  projects_title: 'Significant projects:',
+  projects_text: 'There are my projects',
   linkedin_link: 'https://www.linkedin.com/in/smirnov-konstantin-9ba95770',
   index_description: 'There is index page description',
   index_keywords: 'There are index page keywords',
