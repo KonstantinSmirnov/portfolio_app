@@ -1,11 +1,11 @@
 class MessageMailer < ActionMailer::Base
 
-  default from: ENV["CONTACT_EMAIL_FROM"]
-  default to: ENV["CONTACT_EMAIL_TO"]
+  default from: 'portfolio-app'
 
-  def new_message(message)
+  def new_message(user, message)
     @message = message
 
+    mail to: user.email
     mail subject: "Message from #{message.name}"
   end
 

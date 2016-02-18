@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-md-10 col-md-offset-1">
+          <%= form_for [:admin, @user], url: admin_update_user_path do |f| %>
+          <h3>Letter from contact form:</h3>
+          <div class="form-group">
+            <%= f.label :email_from %>
+            <%= f.text_field :email_from, class: 'form-control', required: true %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email_to %>
+            <%= f.text_field :email_to, class: 'form-control', required: true %>
+          </div>
+          <hr>
+          <h3>Login credentials:</h3>
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: 'form-control', required: true %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control', required: true %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
+          </div>
+          <small>To make changes you need to provide your current or new password</small>
+          <div class="text-center">
+            <%= f.submit class: 'btn btn-primary btn-lg' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
