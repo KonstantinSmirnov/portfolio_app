@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.valid?
-      MessageMailer.new_message(current_user.email, @message, @content.logo_text).deliver
+      MessageMailer.new_message(admin_email, @message, @content.logo_text).deliver
       flash[:success] = "Your messages has been sent."
       redirect_to contact_path
     else
@@ -18,6 +18,10 @@ private
 
   def message_params
     params.require(:message).permit(:name, :email, :content)
+  end
+
+  def admin_email
+    User.first.email
   end
 
 end
