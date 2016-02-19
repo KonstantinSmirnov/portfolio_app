@@ -22,6 +22,7 @@ content = Content.create(
   projects_title: 'Significant projects:',
   projects_text: 'There are my projects',
   linkedin_link: 'https://www.linkedin.com/in/smirnov-konstantin-9ba95770',
+  contact_text: 'If you have any purpose to contact me please be free do to it on this page.',
   index_description: 'There is index page description',
   index_keywords: 'There are index page keywords',
   projects_description: 'There is projects page description',

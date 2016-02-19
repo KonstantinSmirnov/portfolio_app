@@ -30,6 +30,7 @@ class Admin::DashboardController < ApplicationAdminController
                                       :projects_title,
                                       :projects_text,
                                       :linkedin_link,
+                                      :contact_text,
                                       :index_description,
                                       :index_keywords,
                                       :projects_description,
