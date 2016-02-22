@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def projects
-    @projects = Project.all
+    @projects = Project.all.reverse
   end
 
   def contact

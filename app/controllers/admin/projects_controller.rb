@@ -1,7 +1,7 @@
 class Admin::ProjectsController < ApplicationAdminController
 
   def index
-    @projects = Project.all
+    @projects = Project.all.reverse
   end
 
   def new
