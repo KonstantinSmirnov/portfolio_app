@@ -7,7 +7,7 @@ gem 'rails', '4.2.5'
 # gem 'sqlite3'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.19'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -67,3 +67,5 @@ group :production do
   # Add this if you're using rbenv
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
+
+gem 'rails_12factor'
