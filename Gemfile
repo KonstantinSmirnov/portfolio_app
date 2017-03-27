@@ -68,4 +68,7 @@ group :production do
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
 
-gem 'rails_12factor'
+# gem 'rails_12factor'
+
+# environment variables
+gem 'dotenv-rails'
