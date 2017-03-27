@@ -2,13 +2,14 @@
 lock '3.1.0'
 
 set :application, 'portfolio_app'
+set :user,  'deployer'
 set :repo_url, 'https://github.com/KonstantinSmirnov/portfolio_app.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/deploy/portfolio_app'
+set :deploy_to, '/home/#{fetch(:user)}/apps/#{fetch(:application)}'
 
 # Default value for :scm is :git
 # set :scm, :git
