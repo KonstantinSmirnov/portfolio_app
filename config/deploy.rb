@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.8.0'
 
 server '85.143.209.212', user: 'deployer', roles: [:web, :app, :db], primary: true
 
