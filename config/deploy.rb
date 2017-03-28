@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.8.0'
 
 server '85.143.209.212', user: 'deployer', roles: [:web, :app, :db], primary: true
 
@@ -28,7 +28,7 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
 ## Defaults:
-set :scm,           :git
+# set :scm,           :git #Useless in Capistrano 3.8.0
 set :branch,        :master
 set :format,        :pretty
 set :log_level,     :debug
